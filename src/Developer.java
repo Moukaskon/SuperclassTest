@@ -1,24 +1,13 @@
-public class Developer {
-    private String name;
-    private int id;
+public class Developer extends Employee {
     private String programmingLanguage;
 
     public Developer(String name, int id, String programmingLanguage) {
-        this.name = name;
-        this.id = id;
+        super(name, id);
         this.programmingLanguage = programmingLanguage;
     }
 
+    @Override
     public void work() {
         System.out.println(name + " is coding in " + programmingLanguage + ".");
     }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getId() {
-        return id;
-    }
 }
-

@@ -1,23 +1,13 @@
-public class Manager {
-    private String name;
-    private int id;
+public class Manager extends Employee {
     private String department;
 
     public Manager(String name, int id, String department) {
-        this.name = name;
-        this.id = id;
+        super(name, id);
         this.department = department;
     }
 
+    @Override
     public void work() {
         System.out.println(name + " is managing the " + department + " department.");
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getId() {
-        return id;
     }
 }
